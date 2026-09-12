@@ -1,0 +1,692 @@
+:root {
+    --for-main-color: #56ab2f;
+    --for-accent-color: #a8de63;
+    --for-main-grey: #272727;
+    --for-second-grey: #111212;
+    --for-thirth-grey: #3b3a3a;
+    --for-text: #cdcdcd;
+    --white: #fff;
+    --black: #000;
+--acier: #5a90a4;
+--combat: #cf3f6b;
+--dragon: #026ec5;
+--eau: #4f92d7;
+--elek: #f5d33a;
+--fee: #ed90e7;
+--feu: #ff9e55;
+--glace: #73d0c1;
+--insecte: #93c32c;
+--normal: #939ca3;
+--plante: #63bd5a;
+--poison: #ac6cc9;
+--psy: #fa727a;
+--roche: #c6b98e;
+--sol: #da7944;
+--spectre: #5169af;
+--tenebres: #8d756e;
+--vol: #90abdf;
+--soutien:f6c749;
+}
+
+.kficherp_bw {
+    width: 575px;
+    margin: auto;
+    border: 1px solid var(--first-color);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    color: var(--forum-text);
+    font: 12px Arial;
+}
+
+.kficherp_head {
+    background: linear-gradient(90deg, var(--for-thirth-grey), var(--for-second-grey));
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* Border gradient */
+    border-style: solid;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 7px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-image-source: linear-gradient(to right, var(--first-color), var(--accent-color));
+}
+
+.kficherp_icone {
+    box-sizing: border-box;
+    margin: 10px;
+    border: 1px solid var(--first-color);
+    border-top: none;
+    border-bottom: none;
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+    padding: 8px;
+    position: relative;
+}
+
+.kficherp_icone:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-top: 1px solid var(--first-color);
+    border-bottom: 1px solid var(--first-color);
+    border-radius: 100%;
+    top: -12px;
+    left: -12px;
+}
+
+.kficherp_icone img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 3px solid var(--first-color);
+    border-right: none;
+    background: var(--for-second-grey);
+}
+
+.kficherp_title {
+    font-size: 24px;
+    font-family: 'times new roman';
+    font-style: italic;
+    letter-spacing: -1px;
+    line-height: 23px;
+    width: 390px;
+    text-align: center;
+}
+
+.kficherp_title > span {
+    color: var(--first-color);
+}
+
+.kficherp_bw .kficherp_head .kficherp_title::before {
+  content:"â ";
+}
+
+.kficherp_feat {
+    margin-top: 10px;
+    background: var(--for-text);
+    color: var(--for-second-grey);
+    text-transform: uppercase;
+    font: 10px Arial;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ----- INFOS ----- */
+.kficherp_infos {
+    background: var(--for-second-grey);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    color: var(--white);
+}
+
+.kficherp_infos > div {
+    background: var(--for-thirth-grey);
+    border-radius: 12px;
+    width: 27%;
+    padding: 2px;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.kficherp_meteo > img, .kficherp_date > img {
+    width: 12px;
+}
+
+/* ----- CORPS DU RP ----- */
+.kficherp_body {
+    background: var(--for-second-grey)!important;
+    display: flex;
+    /* Border gradient */
+    border-style: solid;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 7px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-image-source: linear-gradient(to right, var(--first-color), var(--accent-color));
+}
+
+.kficherp_text {
+    box-sizing: border-box;
+    background: var(--for-thirth-grey)!important;
+    width: 360px;
+    padding: 20px;
+    font: 13px Arial;
+    text-align: justify;
+}
+
+/*----- TEAM POKÃ‰MONS -----*/
+.kficherp_team {
+    width: 173px;
+    background: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.kficherp_poke {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.kficherp_poke > div {
+    display: flex;
+    flex-direction: column;
+    width: 110px;
+    line-height: 12px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.kficherp_poke > img {
+    background-image: url(https://i.imgur.com/XISr5vZ.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 32px;
+    max-height: 32px;
+}
+
+.kficherp_poke > div span:nth-child(1) {
+    color: var(--first-color);
+    font-weight: bold;
+    font-size: 11px;
+}
+
+progress.kficherp_pv {
+    margin-top: 4px;
+}
+
+progress.kficherp_pv[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+}
+
+.kficherp_pv::-webkit-progress-bar {
+  background: var(--white);
+}
+.kficherp_pv::-webkit-progress-value {
+  background: var(--first-color);
+}
+
+/* ----- FOOTER ----- */
+.kficherp_footer {
+    background: var(--for-second-grey);
+    padding: 22px 0 22px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.kficherp_hrp {
+    box-sizing: border-box;
+    background: var(--for-thirth-grey);
+    width: 240px;
+    position: relative;
+}
+
+.kficherp_hrp > span {
+    position: absolute;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    background: var(--first-color);
+    border-radius: 35px;
+    padding: 4px;
+    top: -3px;
+    left: -3px;
+    color: var(--white);
+    font: 9px Arial;
+    text-transform: uppercase;
+}
+
+.kficherp_hrp > div:nth-child(3) {
+    display: none;
+}
+
+.kficherp_hrp > div {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    padding-top: 2px;
+}
+
+.kficherp_subtitle {
+    text-align: right;
+    font: 18px Times;
+    font-style: italic;
+    margin-right: 20px;
+}
+
+.kficherp_hrp > div span {
+  color: var(--first-color);
+}
+
+.kficherp_blocfooter {
+    width: 100%;
+    border-bottom: 3px solid var(--first-color);
+    background: #2C2E33;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+/* Inventaire */
+.kficherp_subtitle > span {
+    display: block;
+    font: 12px Arial;
+    text-transform: uppercase;
+    margin-right: -20px;
+    margin-top: -3px;
+}
+
+.kficherp_obj {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--for-main-grey);
+    margin-top: 3px;
+    padding: 2px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.kficherp_obj > div {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.kficherp_obj span {
+    margin-left: 4px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.kficherp_obj img {
+    height: 18px;
+}
+
+/* PokÃ©mon de tÃªte */
+
+.kficherp_hide {
+  display: none!important;
+}
+
+.kficherp_pokefirst {
+    width: 265px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: var(--for-thirth-grey);
+    border-radius: 70px 0 0 70px;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.kficherp_pokeinfo {
+    text-align: center;
+    text-transform: uppercase;
+    width: 155px;
+    position: relative;
+}
+
+.kficherp_pokeinfo progress.kficherp_pv {
+    margin: 0!important;
+    height: 9px!important;
+}
+
+span.kficherp_pvactu {
+    display: block;
+    position: absolute;
+    width: 140px;
+    top: 14px;
+    font-size: 9px;
+    color: var(--for-second-grey);
+}
+
+.kficherp_pokeinfo span:not(:first-of-type), .kficherp_pokeinfo > div {
+    font-size: 10px;
+}
+
+.kficherp_pokeinfo > div:nth-child(2) {
+    background: var(--for-main-grey);
+    padding: 1px;
+    margin-top: 5px;
+}
+
+.kficherp_pokestat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.kficherp_pokestat > span {
+    width: 30%;
+}
+.kficherp_pokestat > span:nth-child(1), .kficherp_pokestat > span:nth-child(2), .kficherp_pokestat > span:nth-child(3), .kficherp_pokestat > span:nth-child(7), .kficherp_pokestat > span:nth-child(8), .kficherp_pokestat > span:nth-child(9) {
+    background: var(--first-color);
+    color: var(--white);
+    margin-top: 5px;
+}
+.kficherp_pokestat > span:nth-child(4), .kficherp_pokestat > span:nth-child(5), .kficherp_pokestat > span:nth-child(6), .kficherp_pokestat > span:nth-child(10), .kficherp_pokestat > span:nth-child(11), .kficherp_pokestat > span:nth-child(12) {
+    background: var(--for-main-grey);
+}
+
+.kficherp_pokeimg {
+    position: relative;
+    left: -7px;
+    width: 80px;
+    max-height: 80px;
+    border-radius: 100%;
+    text-align: center;
+}
+
+.kficherp_pokeimg img:nth-child(1) {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.kficherp_pokeimg img:nth-child(2) {
+    position: absolute;
+    left: -8px;
+    top: -17px;
+    background: var(--for-main-grey);
+    border-radius: 100%;
+    width: 30px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.kficherp_pokeimg > span {
+    width: 100px;
+    font-size: 10px;
+    background: var(--for-main-grey);
+    padding: 4px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    left: -48px;
+    top: -44px;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.kficherp_pokeimg > span:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 48px;
+    bottom: -6px;
+    height: 0;
+    width: 0;
+    border-right: 6px solid transparent;
+    border-top: 8px solid var(--for-main-grey);
+    border-left: 6px solid transparent;
+}
+
+.kficherp_pokeimg img:nth-child(2):hover ~ span {
+    opacity: 1;
+}
+
+/*combats informations hrp*/
+
+para::before {
+font:var(--fa-font-solid);
+content: '\e0fe' ;
+color: var(--elek)!important; 
+}
+
+burn::before {
+content: '\f7e4' ; 
+font: var(--fa-font-sharp-regular);
+color: var(--feu)!important; 
+}
+
+gel::before {
+content: '\f2dc' ; 
+font: var(--fa-font-sharp-light);
+color: var(--glace)!important; 
+}
+
+poisonr::before {
+content: '\f54c' ; 
+font: var(--fa-font-regular);
+color: var(--poison); 
+}
+
+poisong::before {
+content: '\f6e0' ; 
+font: var(--fa-font-sharp-solid);
+color: var(--poison)!important; 
+}
+
+sommeil::before {
+content: '\f7e4' ; 
+font: var(--fa-font-sharp-regular);
+color: var(--feu)!important; 
+}
+
+
+/* MEP DÃ©fi scÃ©nario */
+.scenar{
+font-family: "Courier Prime", monospace; 
+font-weight: bold; text-align:right;
+}
+
+dscenar {
+font-weight:100;
+font-family: "Courier Prime", monospace;
+}
+
+/* Copyright */
+span.kficherp_c {
+    font: 9px Arial;
+    display: block;
+    text-align: center;
+    color: var(--for-text);
+    margin-top: 5px;
+}
+
+/* Trigger warnings */
+
+.OYA_box {
+padding: 10px; 
+background: rgba(33,33,33, 0.75); 
+box-sizing: border-box; 
+width: 500px; 
+position: relative; 
+border: 1px solid black; 
+border-top: 30px solid black;
+}
+
+ .OYA-TW {
+width: 100%; 
+margin-bottom: 20px; 
+border-color: var(--first-color);
+border-top-width: 20px;
+text-align: left; 
+position: relative ;
+}
+
+ .OYA-TW b {
+display:block; 
+position: absolute;
+top: -17px;
+font-size: 11px; 
+color: black;
+}
+
+/* Informations hrp */
+
+.oyaris_infautre {
+width:100%; 
+border-bottom:3px solid #062739; 
+background:#212a2f;
+box-sizing:border-box; 
+padding:10px;
+}
+
+ .oyaris_infautre > b {
+color:#2084bb;
+}
+
+ .oyaris_recapexp {
+width:100%; 
+border-bottom:3px solid #9256A6;
+background:#49434B;
+box-sizing:border-box; 
+padding:10px;
+} 
+
+.oyaris_recapexp > b{
+color:#A89EAB;
+}
+
+.oyaris_cliches {
+width:100%; 
+border-bottom:3px solid var(--first-color); 
+background:#332C2C;
+box-sizing:border-box;
+padding:10px;
+}
+
+ .oyaris_cliches > b {
+color:#dd4132;
+}
+
+.oyaris_cliches p-shiny::after {
+content: '\f890' ; 
+font: var(--fa-font-regular);
+color: var(--soutien)!important; 
+padding: 3px;
+}
+
+.oyaris_defis {
+width:100%; 
+border-bottom:3px solid var(--first-color); 
+background:#2C2E33;
+box-sizing:border-box; 
+padding:10px;
+} 
+
+.oyaris_defis niv1 {
+  color: #3fd82f!important;
+  text-transform: uppercase;
+font-size: 11px;
+}
+
+.oyaris_defis niv2 {
+  color: #f9b729!important;
+  text-transform: uppercase;
+font-size: 11px;
+}
+
+.oyaris_defis niv3 {
+  color: #3fc0e0!important;
+  text-transform: uppercase;
+font-size: 11px;
+}
+
+.oyaris_defis niv4 {
+  color: #F96C6C!important;
+  text-transform: uppercase;
+font-size: 11px;
+}
+
+d1-oya::before{
+content: "[["; 
+color: #3fd82f;
+}
+
+d2-oya::before{
+content: "[["; 
+color: #f9b729;
+}
+
+d3-oya::before{
+content: "[["; 
+color: #3fc0e0;
+}
+
+d4-oya::before{
+content: "[["; 
+color: #F96C6C;
+}
+
+d1-oya::after{
+content: "]]"; 
+color: #3fd82f;
+}
+
+d2-oya::after{
+content: "]]"; 
+color: #f9b729;
+}
+
+d3-oya::after{
+content: "]]"; 
+color: #3fc0e0;
+}
+
+d4-oya::after{
+content: "]]"; 
+color: #F96C6C;
+}
+
+/* Dialogues persos */
+
+dmee {
+color: #80BECF;
+}
+
+doca {
+color: #F96A54!important;
+} 
+
+dva {
+color: #ef92a6;
+}
+
+dza {
+color: #C193EC;
+}
+
+djay {
+color: #F0C300;
+}
+
+dima {
+color: #6FD7D5;
+}
+
+dariella {
+color: #DA8099;
+} 
+
+dvik {
+color: #91A8B1;
+}
